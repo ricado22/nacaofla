@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+    padding: 0;   
     color: #000000;
 }
 
 header {
-    background-color: #cc0000;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(180, 8, 8) 100%, rgba(0, 212, 255, 1) 100%);
     color: #ffffff;
     padding: 10px 20px;
     text-align: center;
@@ -31,7 +31,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
 }
@@ -39,15 +39,19 @@ h2{
 /* Configurações gerais de estilo */
 #jogadores {
     display: flex;
-    flex-direction: column; /* Organiza posições verticalmente */
-    gap: 30px; /* Espaçamento entre seções */
+    flex-direction: column;
+    /* Organiza posições verticalmente */
+    gap: 30px;
+    /* Espaçamento entre seções */
     width: 100%;
     align-items: center;
 }
 
 .posicao {
-    width: 90%; /* Ajusta a largura de cada seção */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    width: 90%;
+    /* Ajusta a largura de cada seção */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
 }
 
 .titulo-posicao {
@@ -55,29 +59,37 @@ h2{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #333; /* Adicione cor para o título */
+    color: #333;
+    /* Adicione cor para o título */
 }
 
 .linha-jogadores {
     display: flex;
-    flex-wrap: wrap; /* Permite que os jogadores fiquem alinhados em várias linhas */
+    flex-wrap: wrap;
+    /* Permite que os jogadores fiquem alinhados em várias linhas */
     gap: 20px;
-    justify-content: center; /* Alinha os jogadores no centro */
+    justify-content: center;
+    /* Alinha os jogadores no centro */
 }
 
 .jogador {
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s; /* Animação suave para interatividade */
+    transition: transform 0.3s;
+    /* Animação suave para interatividade */
 }
 
 .jogador:hover {
-    transform: scale(1.1); /* Destaca o jogador ao passar o mouse */
+    transform: scale(1.1);
+    /* Destaca o jogador ao passar o mouse */
 }
 
 .player-image {
-    width: 150px; /* Define o tamanho padrão das imagens */
+    width: 150px;
+    /* Define o tamanho padrão das imagens */
     height: 150px;
-    border-radius: 50%; /* Torna as imagens circulares */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
+    border-radius: 50%;
+    /* Torna as imagens circulares */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra elegante */
 }

@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     // Lista de jogadores com suas posições no campo
     const jogadores = [
@@ -114,7 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Michael", imagem: "./imagens/michael.webp", posicao: "ataque", coordenadas: { top: "30%", left: "60%" } },
         { nome: "Pedro", imagem: "./imagens/pedro.webp", posicao: "ataque", coordenadas: { top: "25%", left: "45%" } },
         { nome: "Luiz Araújo", imagem: "./imagens/luisaraujo.webp", posicao: "ataque", coordenadas: { top: "25%", left: "55%" } },
-        { nome: "Gonzalo Plata", imagem: "./imagens/plata.webp", posicao: "ataque", coordenadas: { top: "35%", left: "50%" }
+        {
+            nome: "Gonzalo Plata", imagem: "./imagens/plata.webp", posicao: "ataque", coordenadas: { top: "35%", left: "50%" }
         }
     ];
 
@@ -391,3 +391,4 @@ function toggleEstatisticas(jogadorId) {
         `;
     }
 }
+

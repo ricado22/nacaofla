@@ -24,44 +24,42 @@
         <p>Acompanhe notícias, jogos e mais!</p>
     </div>
     <div id="estrutura">
-        <section id="historia">
+        <section id="historia" onclick="window.location.href='historia.html'"; style="cursor: pointer;">
             <h2>História</h2>
             <p>Informações sobre a fundação e títulos do Flamengo.</p>
         </section>
-        <section id="jogadores">
+        <section id="jogadores" onclick="window.location.href='jogadores.html'"; style="cursor: pointer;">
             <h2>Jogadores</h2>
             <p>Lista dos jogadores do elenco principal de 2025.</p>
         </section>
-        <section id="estatisticas">
-            <h2>Estatísticas</h2>
-            <p>Dados das temporadas atuais e anteriores.</p>
-        </section>
-        <section id="calendario">
+        <section id="calendario" onclick="window.location.href='#calendario'"; style="cursor: pointer;">
             <h2>Calendário</h2>
             <p>Dias e horários dos jogos do Flamengo.</p>
-        </section>  
-        <section id="aovivo">
+        </section>
+        <section id="aovivo"onclick="window.location.href='aovivo.html'"; style="cursor: pointer;">
             <h2>Assista</h2>
             <p>Assista ao jogo do malvadão.</p>
-        </section> 
+        </section>
     </div>
-    <div id="calendario">
+    <div id="tabela-calendario">
         <h2>Calendário de Jogos do Flamengo</h2>
-    <table border="1" style="width: 100%; text-align: center; border-collapse: collapse;">
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Horário</th>
-                <th>Adversário</th>
-                <th>Campeonato</th>
-            </tr>
-        </thead>
-        <tbody id="calendario-corpo">
-            <!-- O JavaScript irá adicionar as linhas aqui -->
-        </tbody>
-    </table>
-
+        <table border="1" style="width: 100%; text-align: center; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Horário</th>
+                    <th>Adversário</th>
+                    <th>Campeonato</th>
+                </tr>
+            </thead>
+            <tbody id="calendario-corpo">
+                <!-- O JavaScript irá adicionar as linhas aqui -->
+            </tbody>
+        </table>
+        
     </div>
+
+
     <footer>
         <p>&copy; 2025 - Site da Nação Fla. Todos os direitos reservados.</p>
     </footer>

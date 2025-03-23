@@ -2,8 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(180, 8, 8) 100%, rgba(0, 212, 255, 1) 100%);
+    background-color: #ffffff;
     color: #000000;
     display: flex;
     flex-direction: column;
@@ -34,8 +33,4 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
-
-#container-video {
-    padding: 10px;
 }
