@@ -147,12 +147,14 @@ img {
     }
 
     table {
+        border: 1px  #fd0000;
         display: block;
         width: 100%;
+
     }
 
     th, td {
         font-size: 12px;
-        padding: 5px;
+        padding: 3px;
     }
 }
