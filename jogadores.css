@@ -1,8 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;   
+    padding: 0;
     color: #000000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 header {
@@ -14,10 +18,9 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: center;
     background-color: #000000;
     padding: 10px;
+    text-align: center;
 }
 
 nav a {
@@ -25,24 +28,19 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    padding: 5px 20px;
+    display: inline-block;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-}
+
 
 /* Configurações gerais de estilo */
 #jogadores {
-    display: flex;
-    flex-direction: column;
-    /* Organiza posições verticalmente */
     gap: 30px;
-    /* Espaçamento entre seções */
     width: 100%;
     align-items: center;
 }
@@ -92,4 +90,35 @@ h2 {
     /* Torna as imagens circulares */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     /* Adiciona uma sombra elegante */
+}
+
+@media (max-width: 768px) {
+    .linha-jogadores {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .player-image {
+        width: auto;
+        height: auto;
+    }
+
+    .titulo-posicao {
+        font-size: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px;
+        padding: 15px;
+    }
+
 }

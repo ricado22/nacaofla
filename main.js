@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             data: "03/04/2025",
             horario: "21:30",
-            adversario: "Deportivo Táchira",
+            adversario: "Deportivo tachira",
             campeonato: "Libertadores"
         },
         {
@@ -57,8 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
         imgLogo.alt = `Logo do time ${jogo.adversario}`;
         imgLogo.style.width = "70px"; // Tamanho pequeno do logo
         imgLogo.style.marginRight = "5px"; // Espaçamento ao lado do nome
+        
         const nomeAdversario = document.createElement("span");
         nomeAdversario.textContent = jogo.adversario;
+        
 
         // Adiciona a imagem e o nome do adversário
         colunaAdversario.appendChild(imgLogo);
