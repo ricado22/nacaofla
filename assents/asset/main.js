@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Carregar o arquivo navbar.html e inserir no placeholder
-    fetch("./navbar.html")
+    fetch("navbar.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("navbar-placeholder").innerHTML = data;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     // Define o caminho base das logos
-    const basePath = "./logos/";
+    const basePath = "./assents/logos/";
 
     // Seleciona o corpo da tabela no HTML
     const tabelaCorpo = document.getElementById("calendario-corpo");
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
         imgLogo.alt = `Logo do time ${jogo.adversario}`;
         imgLogo.style.width = "70px"; // Tamanho pequeno do logo
         imgLogo.style.marginRight = "5px"; // Espaçamento ao lado do nome
-        
+
         const nomeAdversario = document.createElement("span");
         nomeAdversario.textContent = jogo.adversario;
-        
+
 
         // Adiciona a imagem e o nome do adversário
         colunaAdversario.appendChild(imgLogo);
@@ -79,105 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Adiciona a linha ao corpo da tabela
         tabelaCorpo.appendChild(linha);
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Lista de jogadores com suas posições no campo
-    const jogadores = [
-        // Goleiros
-        { nome: "Agustín Rossi", imagem: "./imagens/agustinrossi.webp", posicao: "goleiro", coordenadas: { top: "80%", left: "50%" } },
-        { nome: "Matheus Cunha", imagem: "./imagens/matheuscunha.webp", posicao: "goleiro", coordenadas: { top: "82%", left: "48%" } },
-        { nome: "Dyogo Alves", imagem: "./imagens/dyogoalves.webp", posicao: "goleiro", coordenadas: { top: "82%", left: "52%" } },
-
-        // Defensores
-        { nome: "Léo Ortiz", imagem: "./imagens/leortiz.webp", posicao: "defesa", coordenadas: { top: "60%", left: "40%" } },
-        { nome: "Léo Pereira", imagem: "./imagens/leopereira.webp", posicao: "defesa", coordenadas: { top: "60%", left: "50%" } },
-        { nome: "Danilo", imagem: "./imagens/danilo.webp", posicao: "defesa", coordenadas: { top: "60%", left: "60%" } },
-        { nome: "Cleiton", imagem: "./imagens/cleiton.webp", posicao: "defesa", coordenadas: { top: "60%", left: "70%" } },
-        { nome: "Matías Viña", imagem: "./imagens/matiasvina.webp", posicao: "defesa", coordenadas: { top: "65%", left: "35%" } },
-        { nome: "Ayrton Lucas", imagem: "./imagens/ayrtonlucas.webp", posicao: "defesa", coordenadas: { top: "65%", left: "25%" } },
-        { nome: "Alex Sandro", imagem: "./imagens/alexsandro.webp", posicao: "defesa", coordenadas: { top: "65%", left: "45%" } },
-
-        // Meio-campistas
-        { nome: "Erick Pulgar", imagem: "./imagens/pulgar.webp", posicao: "meio-campo", coordenadas: { top: "50%", left: "45%" } },
-        { nome: "Allan", imagem: "./imagens/allan.webp", posicao: "meio-campo", coordenadas: { top: "50%", left: "55%" } },
-        { nome: "Everton Araújo", imagem: "./imagens/evertonaraujo.webp", posicao: "meio-campo", coordenadas: { top: "50%", left: "35%" } },
-        { nome: "Gerson", imagem: "./imagens/gerson.webp", posicao: "meio-campo", coordenadas: { top: "45%", left: "50%" } },
-        { nome: "Nicolás De La Cruz", imagem: "./imagens/delacruz.webp", posicao: "meio-campo", coordenadas: { top: "50%", left: "65%" } },
-        { nome: "Giorgian De Arrascaeta", imagem: "./imagens/arrascaeta.webp", posicao: "meio-campo", coordenadas: { top: "45%", left: "40%" } },
-        { nome: "Matheus Gonçalves", imagem: "./imagens/matheusgonçalves.webp", posicao: "meio-campo", coordenadas: { top: "45%", left: "30%" } },
-        { nome: "Lorran", imagem: "./imagens/lorran.webp", posicao: "meio-campo", coordenadas: { top: "45%", left: "60%" } },
-
-        // Atacantes
-        { nome: "Bruno Henrique", imagem: "./imagens/brunohenrique.webp", posicao: "ataque", coordenadas: { top: "30%", left: "50%" } },
-        { nome: "Juninho", imagem: "./imagens/juninho.webp", posicao: "ataque", coordenadas: { top: "30%", left: "40%" } },
-        { nome: "Michael", imagem: "./imagens/michael.webp", posicao: "ataque", coordenadas: { top: "30%", left: "60%" } },
-        { nome: "Pedro", imagem: "./imagens/pedro.webp", posicao: "ataque", coordenadas: { top: "25%", left: "45%" } },
-        { nome: "Luiz Araújo", imagem: "./imagens/luisaraujo.webp", posicao: "ataque", coordenadas: { top: "25%", left: "55%" } },
-        {
-            nome: "Gonzalo Plata", imagem: "./imagens/plata.webp", posicao: "ataque", coordenadas: { top: "35%", left: "50%" }
-        }
-    ];
-
-
-    // Elementos HTML
-    const listaJogadores = document.getElementById("jogadores-lista");
-    const campo = document.getElementById("campo-container");
-
-    // Organiza jogadores por posição
-    const posicoes = {
-        goleiro: [],
-        defesa: [],
-        meioCampo: [],
-        ataque: []
-    };
-
-    jogadores.forEach(jogador => {
-        if (jogador.posicao === "defesa") posicoes.defesa.push(jogador);
-        else if (jogador.posicao === "meio-campo") posicoes.meioCampo.push(jogador);
-        else if (jogador.posicao === "ataque") posicoes.ataque.push(jogador);
-        else if (jogador.posicao === "goleiro") posicoes.goleiro.push(jogador);
-    });
-
-    // Função para renderizar jogadores no campo ao clicar na lista
-    const renderizarJogador = jogador => {
-        const jogadorDiv = document.createElement("div");
-        jogadorDiv.classList.add("jogador");
-
-        const imgJogador = document.createElement("img");
-        imgJogador.src = jogador.imagem;
-        imgJogador.alt = jogador.nome;
-        imgJogador.style.width = "100px";
-        imgJogador.style.borderRadius = "50%";
-
-        jogadorDiv.style.position = "absolute";
-        jogadorDiv.style.top = jogador.coordenadas.top;
-        jogadorDiv.style.left = jogador.coordenadas.left;
-
-        jogadorDiv.appendChild(imgJogador);
-        campo.appendChild(jogadorDiv);
-    };
-
-    // Gera listas por posição
-    Object.keys(posicoes).forEach(posicao => {
-        const header = document.createElement("h4");
-        header.textContent = posicao.charAt(0).toUpperCase() + posicao.slice(1);
-        listaJogadores.appendChild(header);
-
-        posicoes[posicao].forEach(jogador => {
-            const li = document.createElement("li");
-            li.textContent = jogador.nome;
-            li.style.cursor = "pointer";
-            li.style.marginBottom = "10px";
-            li.style.padding = "5px";
-            li.style.border = "1px solid #ccc";
-            li.style.borderRadius = "5px";
-            li.style.backgroundColor = "#f9f9f9";
-
-            li.addEventListener("click", () => renderizarJogador(jogador));
-            listaJogadores.appendChild(li);
-        });
     });
 });
 
@@ -208,42 +109,50 @@ const estatisticasJogadores = {
         idade: 28,
         posicao: 'Zagueiro',
         jogos: 27,
-        gols: 2
+        gols: 2,
+        assistencias: 5
     },
     cleiton: {
         nome: 'Cleiton',
         idade: 24,
         posicao: 'Zagueiro',
         jogos: 22,
-        gols: 1
+        gols: 1,
+        assistencias: 5
     },
     leoOrtiz: {
         nome: 'Léo Ortiz',
         idade: 29,
         posicao: 'Zagueiro',
         jogos: 28,
-        gols: 3
+        gols: 3,
+        assistencias: 5
     },
     danilo: {
         nome: 'Danilo',
         idade: 25,
         posicao: 'Zagueiro',
         jogos: 25,
-        gols: 2
+        gols: 2,
+        assistencias: 5
     },
     varela: {
         nome: 'Varela',
         idade: 27,
         posicao: 'Lateral Direito',
         jogos: 20,
+        gols: 0,
         assistencias: 5
+
     },
     wesley: {
         nome: 'Wesley',
         idade: 22,
         posicao: 'Lateral Direito',
         jogos: 18,
+        gols: 0,
         assistencias: 3
+
     },
     matiasVina: {
         nome: 'Matías Viña',
@@ -258,6 +167,7 @@ const estatisticasJogadores = {
         idade: 26,
         posicao: 'Lateral Esquerdo',
         jogos: 27,
+        gols: 0,
         assistencias: 7
     },
     alexSandro: {
@@ -265,6 +175,7 @@ const estatisticasJogadores = {
         idade: 30,
         posicao: 'Lateral Esquerdo',
         jogos: 22,
+        gols: 0,
         assistencias: 3
     },
     evertonAraujo: {
@@ -272,6 +183,7 @@ const estatisticasJogadores = {
         idade: 24,
         posicao: 'Volante',
         jogos: 18,
+        gols: 0,
         assistencias: 4
     },
     erickPulgar: {
